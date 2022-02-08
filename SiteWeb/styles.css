@@ -1,0 +1,310 @@
+/* The universal selector is indicated by an asterisk (*).
+ It selects everything in the document (or inside the parent element if it is being chained together 
+ with another element and a descendant combinator).  */
+ /* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.5rem;
+    /* peut etre qu'on en aura pas besoin */
+    min-height:400vh;
+}
+
+.full-height-grow {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-nav ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.main-nav li {
+    color:inherit;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 50px;
+}
+
+.main-nav li:hover {
+    color:brown;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    height: 140px;
+    
+    
+ }
+ /*
+container of the page as class of the body
+the margin 0 auto brings the auto left/right resize */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.title-home{
+    font-weight: 500;
+    font-size: 3em ;
+    margin-bottom: 1rem;
+    margin-top:0;
+}
+
+.subtitle {
+    color: rgb(19, 18, 18);
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    
+}
+
+.btn-opensea{
+    color: black;
+    font-size: 15px;
+    background-color: brown ;
+    padding: .8rem 1.6rem;
+    border-radius: .5rem;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-metamask{
+    color:brown ;
+    font-size: 15px;
+    background-color: white ;
+    padding: .8rem 1.6rem;
+    border-radius: .5rem;
+    
+    text-decoration: none;
+}
+
+
+/* About-Section */
+
+.about-section {
+    display: flex;
+    flex-direction:column;
+    flex-grow: 1;
+    justify-content:center;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    padding-bottom: 200px;
+}
+
+.title-section{
+    font-weight: 500;
+    font-size: 3em ;
+    margin-bottom: 3rem;
+    margin-top:0;
+}
+
+
+.paragraph-section{
+    display: flex;
+    /* width: 50vw;
+    height: 50vw; */
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+ 
+}
+
+.btn-section{
+    color: black;
+    font-size: 20px;
+    background-color: brown ;
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    border: none;
+    text-decoration: none;
+    margin-top: 250px;
+}
+
+
+/* Art-section  */
+
+.art-collection-section {
+    display: flex;
+    flex-direction:column;
+    flex-grow: 1;
+    justify-content:center;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+.display-circle-frame {
+    display:flex;
+    align-items: row;
+    justify-content: space-between;
+    padding-top: 150px;
+}
+/* 
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS */
+
+#bust-art-section-1 {
+    background-image: url(images/bust-art-section-1.png);
+    background-size: cover;
+    width: 15vw; 
+    height: 15vw;
+    border-radius: 50%;
+    border: 3px solid brown;
+    background-color:white;
+    margin: 30px 30px;
+}
+
+#bust-art-section-1 {
+    background-image: url(images/bust-art-section-1.png);
+    background-size: cover;
+    width: 15vw; 
+    height: 15vw;
+    border-radius: 50%;
+    border: solid rgb(121, 28, 28);
+    background-color:white;
+    margin: 30px 30px;
+}
+
+#bust-art-section-2 {
+    background-image: url(images/bust-art-section-2.png);
+    background-size: cover;
+    width: 15vw; 
+    height: 15vw;
+    border-radius: 50%;
+    border: solid brown;
+    background-color:white;
+    margin: 30px 30px;
+}
+
+#bust-art-section-3 {
+    background-image: url(images/Nieztsche-test.png);
+    background-size: cover;
+    width: 15vw; 
+    height: 15vw;
+    border-radius: 50%;
+    border: solid brown;
+    background-color:white;
+    margin: 30px 30px;
+}
+/* 
+RoadMap Section */
+
+.roadmap-section {
+    padding-top: 350px;
+    padding-bottom: 100px;
+
+}
+.title-roadmap-section {
+    font-weight: 500;
+    font-size: 3em ;
+    margin-bottom: 3rem;
+    margin-top:0;
+    text-align: center;
+}
+
+.timeline{
+    position: relative;
+    margin: 50px auto;
+    padding: 40px 0;
+    width: 1000px;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 5px;
+    height: 100%;
+    background: black;
+}
+.timeline ul {
+    margin: 0;
+    padding: 0;
+}
+
+.timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    
+}
+
+.timeline ul li:nth-child(odd){
+    float: left;
+    text-align: right;
+    clear:both;
+}
+
+.timeline ul li:nth-child(even){
+    float: right;
+    text-align: left;
+    clear:both;
+}
+
+.content{
+    padding-bottom: 20px;
+}
+
+
+.timeline ul li:nth-child(odd):before {
+    content: '';
+    position: absolute;
+    top: 55px;
+    right: -7px; 
+    width: 10px;
+    height: 10px;
+    background: rgb(165, 42, 42,1);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgb(165, 42, 42, 0.2); 
+    
+}
+
+.timeline ul li:nth-child(even):before {
+    content: '';
+    position: absolute;
+    top: 55px;
+    left: -3px; 
+    width: 10px;
+    height: 10px;
+    background: rgb(165, 42, 42,1);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgb(165, 42, 42, 0.2); 
+    
+}
+
+/* Footer */
+
+.footer-nav ul {
+    
+    list-style: none;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: auto;
+}
+
+.footer-nav a {
+    text-decoration: none;
+}
